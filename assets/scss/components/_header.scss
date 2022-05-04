@@ -51,8 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 38px;
-    margin: 38px 20px 0;
+    margin: $status-bar-height 20px 0;
 
     .logo {
       font-family: 'Cookie', cursive, 'Noto Sans KR', sans-serif;
@@ -74,3 +73,7 @@
     }
   }
 }
+
+// .story-bar {
+//   margin-top: 50px;
+// }
