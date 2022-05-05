@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+KR:wght@100;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+body {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
 .header-area .status-bar {
   left: 0px;
   right: 0px;
@@ -100,6 +110,27 @@
 .header-area .app-bar .active-bar .ico-mylike {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+}
+
+.story-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 14px;
+  padding-top: 90px;
+}
+
+.story-bar .story-each {
+  padding-right: 15px;
+}
+
+.story-bar .story-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
 }
 
 body {

@@ -74,6 +74,19 @@
   }
 }
 
-// .story-bar {
-//   margin-top: 50px;
-// }
+.story-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+  padding-top: $status-bar-height + $app-bar-height;
+
+  .story-each {
+    padding-right: 15px;
+  }
+
+  .story-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+}
