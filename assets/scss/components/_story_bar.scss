@@ -1,0 +1,52 @@
+.story-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+  padding-top: $status-bar-height + $app-bar-height;
+  box-sizing: border-box;
+
+  .story-each {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    padding-right: 15px;
+    .story-img-area {
+      position: relative;
+      .story-img {
+        border-radius: 100%;
+        border: 3px solid red;
+      }
+      .story-bg-img {
+        position: absolute;
+        bottom: 2px;
+        left: -3px;
+        border-radius: 50%;
+        // border: 2px solid none;
+        background-image: linear-gradient(
+          to bottom,
+          #285aeb,
+          #bc1888,
+          #cc2366,
+          #dc2743,
+          #e6683c,
+          #f09433
+        );
+        // z-index: -1;
+      }
+    }
+    .user-id {
+      display: flex;
+      margin: 4px;
+      width: 70px;
+      font-size: 12px;
+      color: black;
+      & > span {
+        display: block;
+        margin: 0 auto;
+        @include ellipsis;
+      }
+    }
+  }
+}

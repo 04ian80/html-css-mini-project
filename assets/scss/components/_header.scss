@@ -14,7 +14,7 @@
 
     .status-bar_left {
       margin-top: 15px;
-      margin-left: 32px;
+      margin-left: 25px;
       transform: translateY(-2px);
     }
 
@@ -60,33 +60,17 @@
 
     .active-bar {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       width: 30%;
       font-size: 22px;
 
       .ico-logo {
+        padding-left: 25px;
         padding-top: 3px;
       }
       .ico-mylike {
         transform: translateY(1px);
       }
     }
-  }
-}
-
-.story-bar {
-  display: flex;
-  align-items: center;
-  margin-left: 14px;
-  padding-top: $status-bar-height + $app-bar-height;
-
-  .story-each {
-    padding-right: 15px;
-  }
-
-  .story-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
   }
 }

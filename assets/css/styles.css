@@ -32,7 +32,7 @@ li {
 
 .header-area .status-bar .status-bar_left {
   margin-top: 15px;
-  margin-left: 32px;
+  margin-left: 25px;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
@@ -96,14 +96,15 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 30%;
   font-size: 22px;
 }
 
 .header-area .app-bar .active-bar .ico-logo {
+  padding-left: 25px;
   padding-top: 3px;
 }
 
@@ -121,16 +122,62 @@ li {
           align-items: center;
   margin-left: 14px;
   padding-top: 90px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .story-bar .story-each {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
   padding-right: 15px;
 }
 
-.story-bar .story-img {
-  width: 100%;
-  height: 100%;
+.story-bar .story-each .story-img-area {
+  position: relative;
+}
+
+.story-bar .story-each .story-img-area .story-img {
   border-radius: 100%;
+  border: 3px solid red;
+}
+
+.story-bar .story-each .story-img-area .story-bg-img {
+  position: absolute;
+  bottom: 2px;
+  left: -3px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#285aeb), color-stop(#bc1888), color-stop(#cc2366), color-stop(#dc2743), color-stop(#e6683c), to(#f09433));
+  background-image: linear-gradient(to bottom, #285aeb, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+}
+
+.story-bar .story-each .user-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4px;
+  width: 70px;
+  font-size: 12px;
+  color: black;
+}
+
+.story-bar .story-each .user-id > span {
+  display: block;
+  margin: 0 auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 body {
