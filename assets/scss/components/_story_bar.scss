@@ -1,7 +1,13 @@
+.story-area {
+  border-bottom: 1px solid #eee;
+}
+
 .story-bar {
+  position: sticky;
   display: flex;
   align-items: center;
-  margin-left: 14px;
+  margin-left: $main-inner;
+  margin-bottom: 5px;
   padding-top: $status-bar-height + $app-bar-height;
   box-sizing: border-box;
 
@@ -11,37 +17,78 @@
     justify-content: center;
     align-items: center;
     width: 80px;
-    padding-right: 15px;
+    padding-right: 8px;
+
     .story-img-area {
       position: relative;
-      .story-img {
-        border-radius: 100%;
-        border: 3px solid red;
-      }
-      .story-bg-img {
-        position: absolute;
-        bottom: 2px;
-        left: -3px;
+
+      .story-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 50%;
-        // border: 2px solid none;
-        background-image: linear-gradient(
-          to bottom,
-          #285aeb,
-          #bc1888,
-          #cc2366,
-          #dc2743,
-          #e6683c,
-          #f09433
-        );
-        // z-index: -1;
+
+        &.my-story {
+          position: relative;
+          & > .bi-plus {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 2px;
+            right: 4px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 4px solid white;
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            background-color: #1e74ff;
+          }
+        }
+
+        &.story-not-seen,
+        &.story-only-friends {
+          width: 77px;
+          height: 77px;
+        }
+
+        &.story-not-seen {
+          background-image: linear-gradient(
+            to bottom,
+            #bc1888,
+            #cc2366,
+            #dc2743,
+            #e6683c,
+            #f09433
+          );
+        }
+
+        &.story-only-friends {
+          background-color: rgb(33, 230, 26);
+        }
+
+        &.story-seen {
+          width: 75px;
+          height: 75px;
+          background-color: lightgray;
+        }
+
+        .story-img {
+          border-radius: 100%;
+          border: 4px solid white;
+        }
       }
     }
+
     .user-id {
       display: flex;
       margin: 4px;
       width: 70px;
       font-size: 12px;
       color: black;
+
       & > span {
         display: block;
         margin: 0 auto;

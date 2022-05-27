@@ -10,6 +10,34 @@ li {
   padding: 0;
 }
 
+:root {
+  --color-gray-100: lightgray;
+  --color-gray-200: rgb(114, 111, 111);
+}
+
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
 .header-area .status-bar {
   left: 0px;
   right: 0px;
@@ -28,6 +56,8 @@ li {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
+  background-color: #fff;
+  z-index: 5000;
 }
 
 .header-area .status-bar .status-bar_left {
@@ -84,7 +114,10 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 38px 20px 0;
+  margin: 0;
+  padding: 38px 20px 5px;
+  background-color: #fff;
+  z-index: 4999;
 }
 
 .header-area .app-bar .logo {
@@ -101,6 +134,7 @@ li {
           justify-content: flex-end;
   width: 30%;
   font-size: 22px;
+  -webkit-text-stroke: 0.4px;
 }
 
 .header-area .app-bar .active-bar .ico-logo {
@@ -113,14 +147,21 @@ li {
           transform: translateY(1px);
 }
 
+.story-area {
+  border-bottom: 1px solid #eee;
+}
+
 .story-bar {
+  position: -webkit-sticky;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 14px;
+  margin-left: 12px;
+  margin-bottom: 5px;
   padding-top: 90px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -141,25 +182,76 @@ li {
       -ms-flex-align: center;
           align-items: center;
   width: 80px;
-  padding-right: 15px;
+  padding-right: 8px;
 }
 
 .story-bar .story-each .story-img-area {
   position: relative;
 }
 
-.story-bar .story-each .story-img-area .story-img {
-  border-radius: 100%;
-  border: 3px solid red;
+.story-bar .story-each .story-img-area .story-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
 }
 
-.story-bar .story-each .story-img-area .story-bg-img {
+.story-bar .story-each .story-img-area .story-bg.my-story {
+  position: relative;
+}
+
+.story-bar .story-each .story-img-area .story-bg.my-story > .bi-plus {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 2px;
-  left: -3px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#285aeb), color-stop(#bc1888), color-stop(#cc2366), color-stop(#dc2743), color-stop(#e6683c), to(#f09433));
-  background-image: linear-gradient(to bottom, #285aeb, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+  border: 4px solid white;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  background-color: #1e74ff;
+}
+
+.story-bar .story-each .story-img-area .story-bg.story-not-seen, .story-bar .story-each .story-img-area .story-bg.story-only-friends {
+  width: 77px;
+  height: 77px;
+}
+
+.story-bar .story-each .story-img-area .story-bg.story-not-seen {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc1888), color-stop(#cc2366), color-stop(#dc2743), color-stop(#e6683c), to(#f09433));
+  background-image: linear-gradient(to bottom, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+}
+
+.story-bar .story-each .story-img-area .story-bg.story-only-friends {
+  background-color: #21e61a;
+}
+
+.story-bar .story-each .story-img-area .story-bg.story-seen {
+  width: 75px;
+  height: 75px;
+  background-color: lightgray;
+}
+
+.story-bar .story-each .story-img-area .story-bg .story-img {
+  border-radius: 100%;
+  border: 4px solid white;
 }
 
 .story-bar .story-each .user-id {
@@ -180,6 +272,121 @@ li {
   overflow: hidden;
 }
 
-body {
-  height: 800px;
+.post-area .post-card {
+  margin: 10px 0;
+}
+
+.post-area .post-card .post-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 12px 10px;
+}
+
+.post-area .post-card .post-card-header .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-area .post-card .post-card-header .user-info > img {
+  margin-right: 9px;
+  border-radius: 50%;
+}
+
+.post-area .post-card .post-card-header .user-info .if-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-area .post-card .post-card-header .user-info .if-location .post-location {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.post-area .post-card .post-img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-area .post-card .post-like-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 12px;
+  font-size: 20px;
+  -webkit-text-stroke: 0.4px;
+}
+
+.post-area .post-card .post-like-bar .post-ico {
+  padding-right: 10px;
+  font-weight: 700;
+}
+
+.post-area .post-card .post-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 12px;
+  font-weight: 400;
+}
+
+.post-area .post-card .post-desc .post-desc-about {
+  padding-bottom: 8px;
+}
+
+.post-area .post-card .post-desc .post-desc-about .post-desc-like-count,
+.post-area .post-card .post-desc .post-desc-about .user-id-in-desc {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.post-area .post-card .post-desc .post-desc-about .more-text {
+  color: var(--color-gray-200);
+}
+
+.post-area .post-card .post-desc .post-desc-comment,
+.post-area .post-card .post-desc .post-date {
+  color: var(--color-gray-200);
+}
+
+.post-area .post-card .post-desc .post-desc-comment {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.post-area .post-card .post-desc .post-date {
+  font-size: 12px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

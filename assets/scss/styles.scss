@@ -7,13 +7,21 @@
 //abstracts
 @import './abstracts/mixin';
 
+//base
+@import './base/prefix';
+@import './base/reset';
+
 //pages
 @import './pages/intro_page';
 
 //components
 @import './components/header';
 @import './components/story_bar';
+@import './components/main_post';
 
 body {
-  height: 800px;
+  // height: 800vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
