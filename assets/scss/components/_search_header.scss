@@ -1,0 +1,32 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-gray-100);
+  border-radius: 10px;
+  width: $search-form-width;
+  height: 35px;
+  padding: 0 10px;
+
+  &.shop-search-form {
+    margin-top: 10px;
+  }
+
+  .bi-search {
+    color: var(--color-gray-300);
+    transform: translateY(1px);
+  }
+
+  .search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: inherit;
+  }
+}
+
+.bi-geo-alt {
+  font-size: 22px;
+  padding-left: 6px;
+}

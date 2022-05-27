@@ -13,12 +13,15 @@
 
 //pages
 @import './pages/intro_page';
+@import './pages/reels';
+@import './pages/shop';
 
 //components
 @import './components/header';
 @import './components/story_bar';
 @import './components/main_post';
 @import './components/nav_bar';
+@import './components/search_header';
 
 body {
   // height: 800vh;

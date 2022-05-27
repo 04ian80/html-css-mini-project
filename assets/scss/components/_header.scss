@@ -55,8 +55,15 @@
     justify-content: space-between;
     margin: 0;
     padding: $status-bar-height 20px 5px;
-    background-color: #fff;
     z-index: 4999;
+
+    &.other-app-bar {
+      padding-top: $status-bar-height + 20px;
+    }
+
+    .header-title {
+      font-size: 25px;
+    }
 
     .logo {
       font-family: 'Cookie', cursive, 'Noto Sans KR', sans-serif;
