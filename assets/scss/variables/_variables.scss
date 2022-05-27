@@ -1,8 +1,10 @@
 :root {
-  --color-gray-100: lightgray;
-  --color-gray-200: rgb(114, 111, 111);
+  --color-gray-100: #eee;
+  --color-gray-200: lightgray;
+  --color-gray-300: rgb(114, 111, 111);
 }
 
 $status-bar-height: 38px;
 $app-bar-height: 52px;
 $main-inner: 12px;
+$nav-bar-height: 50px;

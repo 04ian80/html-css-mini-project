@@ -10,9 +10,15 @@ li {
   padding: 0;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 :root {
-  --color-gray-100: lightgray;
-  --color-gray-200: rgb(114, 111, 111);
+  --color-gray-100: #eee;
+  --color-gray-200: lightgray;
+  --color-gray-300: rgb(114, 111, 111);
 }
 
 .scroll-x {
@@ -36,6 +42,11 @@ ul,
 li {
   list-style: none;
   padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .header-area .status-bar {
@@ -272,11 +283,15 @@ li {
   overflow: hidden;
 }
 
-.post-area .post-card {
-  margin: 10px 0;
+.post-card {
+  margin: 10px 0 20px 0;
 }
 
-.post-area .post-card .post-card-header {
+.post-card:last-child {
+  margin-bottom: 70px;
+}
+
+.post-card .post-card-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,7 +304,7 @@ li {
   padding: 0 12px 10px;
 }
 
-.post-area .post-card .post-card-header .user-info {
+.post-card .post-card-header .user-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,12 +313,12 @@ li {
           align-items: center;
 }
 
-.post-area .post-card .post-card-header .user-info > img {
+.post-card .post-card-header .user-info > img {
   margin-right: 9px;
   border-radius: 50%;
 }
 
-.post-area .post-card .post-card-header .user-info .if-location {
+.post-card .post-card-header .user-info .if-location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,19 +330,20 @@ li {
   font-weight: 600;
 }
 
-.post-area .post-card .post-card-header .user-info .if-location .post-location {
+.post-card .post-card-header .user-info .if-location .post-location {
   font-size: 11px;
   font-weight: 400;
 }
 
-.post-area .post-card .post-img {
+.post-card .post-img {
   width: 100%;
-  height: 600px;
+  max-height: 2000px;
+  min-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.post-area .post-card .post-like-bar {
+.post-card .post-like-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,12 +358,16 @@ li {
   -webkit-text-stroke: 0.4px;
 }
 
-.post-area .post-card .post-like-bar .post-ico {
+.post-card .post-like-bar .post-ico {
   padding-right: 10px;
   font-weight: 700;
 }
 
-.post-area .post-card .post-desc {
+.post-card .post-like-bar .post-ico > .bi-suit-heart-fill {
+  color: #f00f0f;
+}
+
+.post-card .post-desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,34 +377,64 @@ li {
           flex-direction: column;
   padding: 0 12px;
   font-weight: 400;
+  line-height: 20px;
 }
 
-.post-area .post-card .post-desc .post-desc-about {
-  padding-bottom: 8px;
-}
-
-.post-area .post-card .post-desc .post-desc-about .post-desc-like-count,
-.post-area .post-card .post-desc .post-desc-about .user-id-in-desc {
+.post-card .post-desc .bold {
   font-size: 15px;
   font-weight: 700;
 }
 
-.post-area .post-card .post-desc .post-desc-about .more-text {
-  color: var(--color-gray-200);
+.post-card .post-desc .post-desc-about,
+.post-card .post-desc .post-desc-like-count {
+  padding-bottom: 6px;
 }
 
-.post-area .post-card .post-desc .post-desc-comment,
-.post-area .post-card .post-desc .post-date {
-  color: var(--color-gray-200);
+.post-card .post-desc .post-desc-about .user-id-in-desc,
+.post-card .post-desc .post-desc-like-count .user-id-in-desc {
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.post-area .post-card .post-desc .post-desc-comment {
+.post-card .post-desc .post-desc-about .more-text,
+.post-card .post-desc .post-desc-like-count .more-text {
+  color: var(--color-gray-300);
+}
+
+.post-card .post-desc .post-desc-comment,
+.post-card .post-desc .post-date {
+  color: var(--color-gray-300);
+}
+
+.post-card .post-desc .post-desc-comment {
   font-size: 14px;
   padding-bottom: 5px;
 }
 
-.post-area .post-card .post-desc .post-date {
+.post-card .post-desc .post-date {
   font-size: 12px;
+}
+
+.nav-bar {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  border-top: 1px solid var(--color-gray-100);
+  background-color: #fff;
+}
+
+.nav-bar i {
+  font-size: 22px;
 }
 
 body::-webkit-scrollbar {
