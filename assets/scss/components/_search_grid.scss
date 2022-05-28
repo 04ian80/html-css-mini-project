@@ -33,6 +33,11 @@
       'e b d';
   }
 
+  .post-img-long:hover,
+  .post-img:hover {
+    transform: scale(10px);
+  }
+
   .post-img-long {
     object-fit: cover;
     width: 100%;

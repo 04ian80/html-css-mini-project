@@ -1,0 +1,30 @@
+.ico-wishlist {
+  padding-right: 30px;
+}
+
+.shop-search {
+  display: flex;
+  justify-content: center;
+  padding-top: $status-bar-height + $app-bar-height + 5px;
+}
+
+.shop-category {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 5px;
+  // background-color: #eee;
+
+  .shop-category-each {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    padding: 3px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: var(--color-gray-100);
+  }
+}
