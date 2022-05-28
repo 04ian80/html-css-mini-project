@@ -9,8 +9,11 @@
   height: $nav-bar-height;
   border-top: 1px solid var(--color-gray-100);
   background-color: #fff;
-  i {
-    font-size: 22px;
+  a {
+    outline: none;
+    i {
+      font-size: $ico-normal-size;
+    }
   }
 
   .reels-link {

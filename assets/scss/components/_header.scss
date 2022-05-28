@@ -55,11 +55,8 @@
     justify-content: space-between;
     margin: 0;
     padding: $status-bar-height 20px 5px;
+    background-color: var(--color-white);
     z-index: 4999;
-
-    &.other-app-bar {
-      padding-top: $status-bar-height + 20px;
-    }
 
     .header-title {
       font-size: 25px;
