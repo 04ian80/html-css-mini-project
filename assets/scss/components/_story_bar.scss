@@ -1,5 +1,5 @@
 .story-area {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-gray-100);
 }
 
 .story-bar {
@@ -44,7 +44,7 @@
             font-size: 20px;
             font-weight: 800;
             color: white;
-            background-color: #1e74ff;
+            background-color: var(--color-blue-100);
           }
         }
 

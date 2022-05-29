@@ -22,9 +22,10 @@
 @import './components/shop_header';
 @import './components/shop_main';
 @import './components/profile_header';
+@import './components/profile_info';
 
 body {
-  height: 800vh;
+  // height: 800vh;
   &::-webkit-scrollbar {
     display: none;
   }

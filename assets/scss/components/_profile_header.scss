@@ -1,3 +1,21 @@
+.header-title {
+  display: flex;
+  align-items: center;
+  & > .bi {
+    font-size: 14px;
+    &.bi-lock {
+      -webkit-text-stroke: 0.4px;
+    }
+  }
+
+  .profile-header-title {
+    margin: 0 5px;
+  }
+}
+
 .bi-list {
   font-size: 24px;
+}
+.ico-profile.ico-post {
+  margin-right: 30px;
 }

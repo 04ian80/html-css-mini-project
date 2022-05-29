@@ -1,4 +1,4 @@
-#too-wide {
+.too-wide {
   display: none;
 }
 
@@ -6,7 +6,7 @@
   .too-wide {
     position: absolute;
     z-index: 9999;
-    height: 100vh;
+    height: 1000vh;
     width: 100vw;
     background-image: linear-gradient(
       to bottom,
@@ -19,7 +19,7 @@
     );
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     font-size: 23px;
     color: var(--color-white);
     top: 0;

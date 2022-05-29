@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-#too-wide {
+.too-wide {
   display: none;
 }
 
@@ -34,7 +34,7 @@ a {
   .too-wide {
     position: absolute;
     z-index: 9999;
-    height: 100vh;
+    height: 1000vh;
     width: 100vw;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#5e7dd8), color-stop(#c24a9c), color-stop(#c94a7d), color-stop(#e2586d), color-stop(#f59572), to(#f3af66));
     background-image: linear-gradient(to bottom, #5e7dd8, #c24a9c, #c94a7d, #e2586d, #f59572, #f3af66);
@@ -44,9 +44,6 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     font-size: 23px;
     color: var(--color-white);
     top: 0;
@@ -64,6 +61,7 @@ a {
   --color-gray-100: #eee;
   --color-gray-200: lightgray;
   --color-gray-300: rgb(114, 111, 111);
+  --color-blue-100: #1e74ff;
 }
 
 .status-bar.reels-header-area {
@@ -185,7 +183,7 @@ a {
 }
 
 .story-area {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-gray-100);
 }
 
 .story-bar {
@@ -263,7 +261,7 @@ a {
   font-size: 20px;
   font-weight: 800;
   color: white;
-  background-color: #1e74ff;
+  background-color: var(--color-blue-100);
 }
 
 .story-bar .story-each .story-img-area .story-bg.story-not-seen, .story-bar .story-each .story-img-area .story-bg.story-only-friends {
@@ -457,7 +455,7 @@ a {
   height: 50px;
   border-top: 1px solid var(--color-gray-100);
   background-color: #fff;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .nav-bar a {
@@ -808,12 +806,309 @@ a {
   font-weight: 700;
 }
 
+.header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-title > .bi {
+  font-size: 14px;
+}
+
+.header-title > .bi.bi-lock {
+  -webkit-text-stroke: 0.4px;
+}
+
+.header-title .profile-header-title {
+  margin: 0 5px;
+}
+
 .bi-list {
   font-size: 24px;
 }
 
-body {
-  height: 800vh;
+.ico-profile.ico-post {
+  margin-right: 30px;
+}
+
+main {
+  margin-top: 92px;
+  letter-spacing: -0.3px;
+}
+
+main .prf-info {
+  padding: 0 12px;
+}
+
+main .prf-base {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .prf-base .prf-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33%;
+  position: relative;
+}
+
+main .prf-base .prf-img > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+main .prf-base .prf-img .bi-plus {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 2px;
+  left: 65px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  background-color: var(--color-blue-100);
+  -webkit-text-stroke: 0.4px;
+}
+
+main .prf-base .prf-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 67%;
+}
+
+main .prf-base .prf-follow .prf-post-count,
+main .prf-base .prf-follow .prf-follower,
+main .prf-base .prf-follow .prf-following {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+}
+
+main .prf-base .prf-follow .prf-post-count > span,
+main .prf-base .prf-follow .prf-follower > span,
+main .prf-base .prf-follow .prf-following > span {
+  font-weight: 600;
+}
+
+main .prf-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 15px 0;
+}
+
+main .prf-desc > span:first-child {
+  font-weight: 600;
+}
+
+main .prf-edit-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+main .prf-edit-add .prf-edit,
+main .prf-edit-add .bi-person-plus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
+  margin-right: 5px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 5px;
+}
+
+main .prf-edit-add .prf-edit {
+  width: 90%;
+}
+
+main .prf-edit-add .bi-person-plus {
+  width: 30px;
+  font-size: 22px;
+}
+
+main .prf-highlight-title {
+  padding: 20px 0;
+}
+
+main .prf-highlight-title .highlight-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+main .prf-highlight-title .highlight-desc .highlight-desc-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .prf-highlight-title .highlight-desc .highlight-desc-txt > span {
+  font-weight: 600;
+}
+
+main .prf-highlight-title .highlight-desc .bi-chevron-up {
+  font-size: 10px;
+}
+
+main .highlight-stories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main .highlight-stories .highlight-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .highlight-stories .highlight-new .bi-plus-lg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  font-size: 25px;
+}
+
+main .highlight-stories .highlight-new .bi-plus-lg + span {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+main .highlight-stories .highlight-story {
+  margin-left: 15px;
+}
+
+main .highlight-stories .highlight-story > img {
+  border-radius: 50%;
+}
+
+main .prf-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main .prf-tab .bi-grid-3x3,
+main .prf-tab .bi-person-rolodex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 30px;
+  font-size: 20px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+main .prf-tab .bi-grid-3x3 {
+  border-bottom: 1px solid var(--color-black);
+}
+
+main .prf-tab .bi-person-rolodex {
+  color: var(--color-gray-300);
+}
+
+main .prf-main-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-width: 100%;
+          column-width: 100%;
+  -webkit-column-gap: 1px;
+          column-gap: 1px;
+}
+
+main .prf-main-post .prf-post > img {
+  height: 150px;
 }
 
 body::-webkit-scrollbar {
