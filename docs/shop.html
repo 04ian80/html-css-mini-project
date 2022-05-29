@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>side-project</title>
-    <link rel="preload" href="../assets/css/styles.css" as="style" crossorigin="crossorigin"> 
+    <link rel="preload" href="../assets/css/styles.css" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+KR:wght@100;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body>
@@ -36,93 +39,199 @@
         <!-- //status-bar영역 -->
 
         <div class="app-bar other-app-bar">
-            <span class="header-title shop-header-title">Shop</span>
+          <span class="header-title shop-header-title">Shop</span>
           <div class="active-bar">
-            <span class="ico-shop ico-wishlist">
+            <a href="#" class="ico-shop ico-wishlist">
               <i class="bi bi-journal-bookmark"></i>
-            </span>
-            <span class="ico-shop ico-hamberger">
+            </a>
+            <a href="#" class="ico-shop ico-hamberger">
               <i class="bi bi-list"></i>
-            </span>
+            </a>
           </div>
         </div>
-          
-          <div class="shop-search search-app-bar">
-            <form class="shop-search-form search-form">
-              <i class="bi bi-search"></i>
-              <input class="search-input" type="search" placeholder='검색'>
-            </form>
-          </div>
-      </header>
 
-        <main>
-          <nav class="shop-category">
-            <span class="shop-category-each">shops</span>
-            <span class="shop-category-each">동영상</span>
-            <span class="shop-category-each">에디터 추천</span>
-            <span class="shop-category-each">컬렉션</span>
-            <span class="shop-category-each">가이드</span>
-          </nav>
-
-          <div class="main-shop">
-            <div class="shop-area">
-              <div class="shop-item"><img src="../img2/shoe.jpeg" alt="shop image"></div>
-              <div class="shop-item"><img src="../img2/cloth.jpeg" alt="shop image"></div>
-            </div>
-            <div class="shop-area">
-              <div class="shop-item"><img src="../img2/home.jpeg" alt="shop image"></div>
-              <div class="shop-item"><img src="../img2/vintage-clothes.jpeg" alt="shop image"></div>
-            </div>
-
-            <div class="shop-visit-again">
-              <div class="visit-again-header">
-                <span class="visit-again-title">이 Shop 다시 방문하기</span>
-                <span>모두 보기</span>
-              </div>
-              <div class="visit-again-area scroll-x">
-                <div class="visit-again-item">
-                  <div class="visit-again-item-img-area">
-                    <img class="visit-again-profile" src="../img2/singer.jpeg" alt="프로필">
-                    <img class="visit-again-img" src="../img2/cd.jpeg" alt="방문했던 shop">
-                  </div>
-                  <div class="visit-again-info">
-                    <span>lauvsongs</span>
-                    <br>
-                    어제 마지막으로 방문했습니다.
-                  </div>
-                </div>
-                <div class="visit-again-item">
-                  <div class="visit-again-item-img-area">
-                    <img class="visit-again-profile" src="../img2/singer.jpeg" alt="프로필">
-                    <img class="visit-again-img" src="../img2/cloth.jpeg" alt="방문했던 shop">
-                  </div>
-                  <div class="visit-again-info">
-                    <span>lauvsongs</span>
-                    <br>
-                    이 Shop에서
-                    <br>
-                    제품을 조회했습니다.
-                  </div>
-                </div>
-                <div class="visit-again-item"><img class="visit-again-img" src="" alt="방문했던 shop"></div>
-                <div class="visit-again-item"><img class="visit-again-img" src="" alt="방문했던 shop"></div>
-                <div class="visit-again-item"><img class="visit-again-img" src="" alt="방문했던 shop"></div>
-              </div>
-
-            </div>
-          </div>
-        </main>
-        
-        <nav class="nav-bar">
-          <a href="./home.html"><i class="bi bi-house-door"></i></a>
-          <a href="./search.html"><i class="bi bi-search"></i></a>
-          <a href="./reels.html"><i class="bi bi-film"></i></a>
-          <a href="./shop.html"><i class="bi bi-handbag-fill"></i></a>
-          <a href="./my-profile.html"><i class="bi bi-person"></i></a>
-        </nav>
-
+        <div class="shop-search search-app-bar">
+          <form class="shop-search-form search-form">
+            <i class="bi bi-search"></i>
+            <input class="search-input" type="search" placeholder="검색" />
+          </form>
+        </div>
       </div>
+    </header>
 
-      <div class="too-wide"><----pc버전 이라면 화살표가 화면 끝에 닿을때까지 화면을 줄여주세요:&#41;</div>
+    <main>
+      <nav class="shop-category">
+        <a href="#" class="shop-category-each">shops</a>
+        <a href="#" class="shop-category-each">동영상</a>
+        <a href="#" class="shop-category-each">에디터 추천</a>
+        <a href="#" class="shop-category-each">컬렉션</a>
+        <a href="#" class="shop-category-each">가이드</a>
+      </nav>
+
+      <div class="main-shop">
+        <div class="shop-area">
+          <div class="shop-item">
+            <img src="../img2/shoe.jpeg" alt="shop image" />
+          </div>
+          <div class="shop-item">
+            <img src="../img2/cloth.jpeg" alt="shop image" />
+          </div>
+        </div>
+        <div class="shop-area">
+          <div class="shop-item">
+            <img src="../img2/home.jpeg" alt="shop image" />
+          </div>
+          <div class="shop-item">
+            <img src="../img2/vintage-clothes.jpeg" alt="shop image" />
+          </div>
+        </div>
+
+        <div class="shop-visit-again">
+          <div class="visit-again-header">
+            <span class="visit-again-title">이 Shop 다시 방문하기</span>
+            <span><a href="#">모두 보기</a></span>
+          </div>
+          <div class="visit-again-area scroll-x">
+            <div class="visit-again-item">
+              <div class="visit-again-item-img-area">
+                <img
+                  class="visit-again-profile"
+                  src="../img2/singer.jpeg"
+                  alt="프로필"
+                />
+                <img
+                  class="visit-again-img"
+                  src="../img2/cd.jpeg"
+                  alt="방문했던 shop"
+                />
+              </div>
+              <div class="visit-again-info">
+                <span>lauvsongs</span>
+                <br />
+                어제 마지막으로 방문했습니다.
+              </div>
+            </div>
+
+            <div class="visit-again-item">
+              <div class="visit-again-item-img-area">
+                <img
+                  class="visit-again-profile"
+                  src="../img2/person.jpeg"
+                  alt="프로필"
+                />
+                <img
+                  class="visit-again-img"
+                  src="../img2/cloth.jpeg"
+                  alt="방문했던 shop"
+                />
+              </div>
+              <div class="visit-again-info">
+                <span>modern_things</span>
+                <br />
+                이 Shop에서
+                <br />
+                제품을 조회했습니다.
+              </div>
+            </div>
+
+            <div class="visit-again-item">
+              <div class="visit-again-item-img-area">
+                <img
+                  class="visit-again-profile"
+                  src="http://via.placeholder.com/30x30"
+                  alt="프로필"
+                />
+                <img
+                  class="visit-again-img"
+                  src="http://via.placeholder.com/200x200"
+                  alt="방문했던 shop"
+                />
+              </div>
+              <div class="visit-again-info">
+                <span>random_shop</span>
+                <br />
+                이 Shop에서
+                <br />
+                제품을 조회했습니다.
+              </div>
+            </div>
+
+            <div class="visit-again-item">
+              <div class="visit-again-item-img-area">
+                <img
+                  class="visit-again-profile"
+                  src="http://via.placeholder.com/30x30"
+                  alt="프로필"
+                />
+                <img
+                  class="visit-again-img"
+                  src="http://via.placeholder.com/200x200"
+                  alt="방문했던 shop"
+                />
+              </div>
+              <div class="visit-again-info">
+                <span>somethingulike</span>
+                <br />
+                9일 전에 마지막으로
+                <br />
+                방문했습니다.
+              </div>
+            </div>
+
+            <div class="visit-again-item">
+              <div class="visit-again-item-img-area">
+                <img
+                  class="visit-again-profile"
+                  src="https://via.placeholder.com/30x30"
+                  alt="프로필"
+                />
+                <img
+                  class="visit-again-img"
+                  src="http://via.placeholder.com/200x200"
+                  alt="방문했던 shop"
+                />
+              </div>
+              <div class="visit-again-info">
+                <span>modern_things</span>
+                <br />
+                이 Shop에서
+                <br />
+                제품을 조회했습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-area">
+          <div class="shop-item">
+            <img src="../img2/shoe.jpeg" alt="shop image" />
+          </div>
+          <div class="shop-item">
+            <img src="../img2/cloth.jpeg" alt="shop image" />
+          </div>
+        </div>
+        <div class="shop-area">
+          <div class="shop-item">
+            <img src="../img2/home.jpeg" alt="shop image" />
+          </div>
+          <div class="shop-item">
+            <img src="../img2/vintage-clothes.jpeg" alt="shop image" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav-bar">
+      <a href="./home.html"><i class="bi bi-house-door"></i></a>
+      <a href="./search.html"><i class="bi bi-search"></i></a>
+      <a href="./reels.html"><i class="bi bi-film"></i></a>
+      <a href="./shop.html"><i class="bi bi-handbag-fill"></i></a>
+      <a href="./my-profile.html"><i class="bi bi-person"></i></a>
+    </nav>
+
+    <div class="too-wide">
+      &lt;----pc버전 이라면 화살표가 화면 끝에 닿을때까지 화면을
+      줄여주세요:&#41;
+    </div>
   </body>
 </html>
