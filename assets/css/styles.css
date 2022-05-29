@@ -68,6 +68,31 @@ a {
   background-color: black;
 }
 
+.vignette1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.vignette2 {
+  position: absolute;
+  bottom: 51px;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+.reels-box > img {
+  width: 100%;
+  height: 100%;
+}
+
 .header-area .status-bar {
   position: fixed;
   left: 0;
@@ -180,6 +205,12 @@ a {
 .header-area .app-bar .active-bar .ico-mylike {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+}
+
+.status-bar.reels-header-area,
+.app-bar.reels-app-bar {
+  background: none;
+  color: var(--color-white);
 }
 
 .story-area {
@@ -486,6 +517,7 @@ a {
 
 .nav-bar-reels {
   background-color: var(--color-black);
+  border-top: 1px solid #000;
 }
 
 .nav-bar-reels i {
