@@ -1,5 +1,6 @@
 main {
   margin-top: $status-bar-height + $app-bar-height + 10px;
+  margin-bottom: $nav-bar-height;
   letter-spacing: -0.3px;
 
   .prf-info {
@@ -12,8 +13,6 @@ main {
     align-items: center;
 
     .prf-img {
-      display: flex;
-      width: 33%;
       position: relative;
 
       & > img {
@@ -128,6 +127,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      cursor: pointer;
 
       .bi-plus-lg {
         display: flex;
@@ -179,18 +179,37 @@ main {
   }
 
   .prf-main-post {
-    display: flex;
-    column-count: 3;
-    column-width: 100%;
-    column-gap: 1px;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'one two three';
+    grid-gap: 1px;
     .prf-post {
-      // width: 100%;
+      position: relative;
+      height: 170px;
+
+      .one {
+        grid-area: one;
+      }
+
+      .two {
+        grid-area: two;
+      }
+
+      .three {
+        grid-area: three;
+      }
 
       & > img {
-        // width: 160px;
-        // height: 150px;
-        height: 150px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      & > .bi {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: var(--color-white);
       }
     }
   }

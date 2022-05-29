@@ -837,6 +837,7 @@ a {
 
 main {
   margin-top: 92px;
+  margin-bottom: 50px;
   letter-spacing: -0.3px;
 }
 
@@ -857,10 +858,6 @@ main .prf-base {
 }
 
 main .prf-base .prf-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 33%;
   position: relative;
 }
 
@@ -1033,6 +1030,7 @@ main .highlight-stories .highlight-new {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 main .highlight-stories .highlight-new .bi-plus-lg {
@@ -1096,19 +1094,50 @@ main .prf-tab .bi-person-rolodex {
 }
 
 main .prf-main-post {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-count: 3;
-          column-count: 3;
-  -webkit-column-width: 100%;
-          column-width: 100%;
-  -webkit-column-gap: 1px;
-          column-gap: 1px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: 'one two three';
+  grid-gap: 1px;
+}
+
+main .prf-main-post .prf-post {
+  position: relative;
+  height: 170px;
+}
+
+main .prf-main-post .prf-post .one {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+main .prf-main-post .prf-post .two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+main .prf-main-post .prf-post .three {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: three;
 }
 
 main .prf-main-post .prf-post > img {
-  height: 150px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+main .prf-main-post .prf-post > .bi {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--color-white);
 }
 
 body::-webkit-scrollbar {
