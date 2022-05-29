@@ -135,6 +135,7 @@ a {
 
 .header-area .app-bar {
   position: fixed;
+  top: 10px;
   left: 0;
   right: 0;
   display: -webkit-box;
@@ -146,7 +147,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0;
   padding: 36px 20px 5px;
   background-color: var(--color-white);
   z-index: 4999;
