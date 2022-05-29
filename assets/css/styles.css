@@ -26,6 +26,38 @@ a {
   text-decoration: none;
 }
 
+#too-wide {
+  display: none;
+}
+
+@media screen and (min-width: 653px) {
+  .too-wide {
+    position: absolute;
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5e7dd8), color-stop(#c24a9c), color-stop(#c94a7d), color-stop(#e2586d), color-stop(#f59572), to(#f3af66));
+    background-image: linear-gradient(to bottom, #5e7dd8, #c24a9c, #c94a7d, #e2586d, #f59572, #f3af66);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 23px;
+    color: var(--color-white);
+    top: 0;
+  }
+  body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
 :root {
   --color-white: #fff;
   --color-black: black;
@@ -628,7 +660,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 5px;
+  padding: 0 5px 10px;
 }
 
 .shop-category .shop-category-each {
@@ -652,17 +684,94 @@ a {
 }
 
 .main-shop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: 50px;
+}
+
+.main-shop .shop-area {
   width: 100%;
 }
 
-.shop-item > img {
-  width: 321px;
-  height: 321px;
+.main-shop .shop-area .shop-item > img {
+  float: left;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 50%;
+  height: 250px;
+}
+
+.main-shop .shop-visit-again {
+  background-color: #eee;
+}
+
+.main-shop .shop-visit-again .visit-again-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 12px 12px;
+}
+
+.main-shop .shop-visit-again .visit-again-header .visit-again-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-shop .shop-visit-again .visit-again-header span:last-child {
+  font-weight: 400;
+}
+
+.main-shop .visit-again-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px 20px;
+}
+
+.main-shop .visit-again-area .visit-again-item {
+  position: relative;
+}
+
+.main-shop .visit-again-area .visit-again-item .visit-again-item-img-area {
+  position: relative;
+}
+
+.main-shop .visit-again-area .visit-again-item .visit-again-item-img-area .visit-again-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin-right: 5px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 10px;
+}
+
+.main-shop .visit-again-area .visit-again-item .visit-again-item-img-area .visit-again-profile {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.main-shop .visit-again-area .visit-again-item .visit-again-info {
+  position: absolute;
+  color: var(--color-white);
+  bottom: 20px;
+  left: 10px;
+  font-size: 13px;
+}
+
+.main-shop .visit-again-area .visit-again-item .visit-again-info > span {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 body::-webkit-scrollbar {

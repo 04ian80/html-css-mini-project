@@ -1,0 +1,32 @@
+#too-wide {
+  display: none;
+}
+
+@media screen and (min-width: 653px) {
+  .too-wide {
+    position: absolute;
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(
+      to bottom,
+      #5e7dd8,
+      #c24a9c,
+      #c94a7d,
+      #e2586d,
+      #f59572,
+      #f3af66
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: var(--color-white);
+    top: 0;
+  }
+  body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+}
