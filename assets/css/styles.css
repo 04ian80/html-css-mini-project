@@ -71,9 +71,9 @@ a {
 }
 
 .header-area .status-bar {
-  left: 0px;
-  right: 0px;
   position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +154,7 @@ a {
 
 .header-area .app-bar .header-title {
   font-size: 25px;
+  font-weight: 700;
 }
 
 .header-area .app-bar .logo {
@@ -198,7 +199,7 @@ a {
           align-items: center;
   margin-left: 12px;
   margin-bottom: 5px;
-  padding-top: 88px;
+  padding-top: 82px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -637,6 +638,10 @@ a {
   grid-area: f;
 }
 
+.bi-list {
+  font-size: 24px;
+}
+
 .ico-wishlist {
   padding-right: 30px;
 }
@@ -648,7 +653,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 93px;
+  padding-top: 56px;
 }
 
 .shop-category {
@@ -801,6 +806,14 @@ a {
 .main-shop .shop-visit-again .visit-again-area .visit-again-item .visit-again-info > span {
   font-size: 15px;
   font-weight: 700;
+}
+
+.bi-list {
+  font-size: 24px;
+}
+
+body {
+  height: 800vh;
 }
 
 body::-webkit-scrollbar {

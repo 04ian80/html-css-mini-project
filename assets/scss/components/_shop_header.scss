@@ -1,3 +1,7 @@
+.bi-list {
+  font-size: 24px;
+}
+
 .ico-wishlist {
   padding-right: 30px;
 }
@@ -5,7 +9,7 @@
 .shop-search {
   display: flex;
   justify-content: center;
-  padding-top: $status-bar-height + $app-bar-height + 5px;
+  padding-top: $app-bar-height + 10px;
 }
 
 .shop-category {
