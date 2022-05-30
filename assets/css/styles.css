@@ -371,7 +371,7 @@ a {
           align-items: center;
   margin-left: 12px;
   margin-bottom: 5px;
-  padding-top: 82px;
+  padding-top: 36px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -826,7 +826,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 56px;
+  padding-top: 36px;
 }
 
 .shop-category {
@@ -1011,7 +1011,7 @@ a {
 }
 
 main {
-  margin-top: 92px;
+  margin-top: 82px;
   margin-bottom: 50px;
   letter-spacing: -0.3px;
 }
@@ -1258,6 +1258,7 @@ main .prf-tab .bi-person-rolodex {
   height: 30px;
   font-size: 20px;
   border-bottom: 1px solid var(--color-gray-100);
+  cursor: pointer;
 }
 
 main .prf-tab .bi-grid-3x3 {

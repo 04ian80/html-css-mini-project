@@ -1,5 +1,5 @@
 main {
-  margin-top: $status-bar-height + $app-bar-height + 10px;
+  margin-top: $status-bar-height + $app-bar-height + 20px;
   margin-bottom: $nav-bar-height;
   letter-spacing: -0.3px;
 
@@ -167,6 +167,7 @@ main {
       height: 30px;
       font-size: 20px;
       border-bottom: 1px solid var(--color-gray-100);
+      cursor: pointer;
     }
 
     .bi-grid-3x3 {
