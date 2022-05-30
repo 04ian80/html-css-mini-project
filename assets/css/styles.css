@@ -69,28 +69,94 @@ a {
 }
 
 .vignette1 {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   height: 100px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  z-index: 45;
 }
 
 .vignette2 {
-  position: absolute;
+  position: fixed;
   bottom: 51px;
   right: 0;
   left: 0;
   height: 100px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  z-index: 45;
 }
 
-.reels-box > img {
+.reels-box {
+  position: absolute;
+  top: 0;
+}
+
+.reels-box .reels-each {
+  position: relative;
+  min-height: 775px;
   width: 100%;
-  height: 100%;
+}
+
+.reels-box .reels-each .reels-main-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100vw;
+  height: 94vh;
+}
+
+.reels-box .reels-each .reels-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  padding: 0 12px;
+}
+
+.reels-box .reels-each .reels-detail .reels-detail-desc .reels-post-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reels-box .reels-each .reels-detail .reels-detail-desc .reels-post-header > * {
+  margin-right: 10px;
+}
+
+.reels-box .reels-each .reels-detail .reels-detail-desc .reels-post-header > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reels-box .reels-each .reels-detail .reels-detail-desc .reels-post-header .reels-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--color-white);
 }
 
 .header-area .status-bar {
@@ -1170,6 +1236,10 @@ main .prf-main-post .prf-post > .bi {
   right: 10px;
   top: 10px;
   color: var(--color-white);
+}
+
+body {
+  margin: 0;
 }
 
 body::-webkit-scrollbar {

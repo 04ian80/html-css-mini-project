@@ -5,26 +5,72 @@
 }
 
 .vignette1 {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   height: 100px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  z-index: 45;
 }
 
 .vignette2 {
-  position: absolute;
+  position: fixed;
   bottom: $nav-bar-height + 1px;
   right: 0;
   left: 0;
   height: 100px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  z-index: 45;
 }
 
 .reels-box {
-  & > img {
+  position: absolute;
+  top: 0;
+  .reels-each {
+    position: relative;
+    min-height: 825px - $nav-bar-height;
     width: 100%;
-    height: 100%;
+    .reels-main-img {
+      object-fit: cover;
+      box-sizing: content-box;
+      width: 100vw;
+      height: 94vh;
+    }
+    .reels-detail {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      padding: 0 $main-inner;
+
+      .reels-detail-desc {
+        .reels-post-header {
+          display: flex;
+          align-items: center;
+
+          & > * {
+            margin-right: 10px;
+          }
+
+          & > img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .reels-follow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 5px;
+            border-radius: 3px;
+            border: 1px solid var(--color-white);
+          }
+        }
+      }
+    }
   }
 }
