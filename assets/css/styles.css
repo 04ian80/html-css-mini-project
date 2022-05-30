@@ -74,8 +74,8 @@ a {
   right: 0;
   left: 0;
   height: 100px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
   z-index: 45;
 }
 
@@ -85,29 +85,41 @@ a {
   right: 0;
   left: 0;
   height: 100px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   z-index: 45;
 }
 
 .reels-box {
   position: absolute;
   top: 0;
+  background-color: var(--color-gray-300);
 }
 
 .reels-box .reels-each {
   position: relative;
   min-height: 775px;
-  width: 100%;
+  width: 100vw;
+  margin-bottom: 50px;
 }
 
-.reels-box .reels-each .reels-main-img {
+.reels-box .reels-each .video-box {
+  width: 100vw;
+  z-index: -1;
+}
+
+.reels-box .reels-each .video-box .video-itself-horizaltal,
+.reels-box .reels-each .video-box .video-itself-vertical {
+  position: absolute;
+  width: 100vw;
+  height: 97vh;
+  left: 0;
+  right: 0;
+}
+
+.reels-box .reels-each .video-box .video-itself-vertical {
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  width: 100vw;
-  height: 94vh;
 }
 
 .reels-box .reels-each .reels-detail {
@@ -118,9 +130,27 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   bottom: 10px;
-  padding: 0 12px;
+  color: var(--color-white);
+}
+
+.reels-box .reels-each .reels-detail .reels-detail-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 12px;
+}
+
+.reels-box .reels-each .reels-detail .reels-detail-desc > * {
+  margin-bottom: 10px;
 }
 
 .reels-box .reels-each .reels-detail .reels-detail-desc .reels-post-header {
@@ -157,6 +187,53 @@ a {
   padding: 3px 5px;
   border-radius: 3px;
   border: 1px solid var(--color-white);
+}
+
+.reels-box .reels-each .reels-detail .reels-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 12px;
+}
+
+.reels-box .reels-each .reels-detail .reels-active i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.reels-box .reels-each .reels-detail .reels-active > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.reels-box .reels-each .reels-detail .reels-active .reels-like,
+.reels-box .reels-each .reels-detail .reels-active .reels-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reels-box .reels-each .reels-detail .reels-active .audio-info > img {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: 2px solid var(--color-white);
 }
 
 .header-area .status-bar {
